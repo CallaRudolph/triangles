@@ -12,6 +12,7 @@ console.log("test")
 
     var equilateral = "Your triangle is equilateral"
     var isosceles = "Your triangle is isosceles"
+    var scalene = "Your triangle is scalene homeslice"
 
     if (triside1 === triside2 && triside1 === triside3) {
       $("#answer").text(equilateral);
@@ -25,7 +26,13 @@ console.log("test")
     } else if (triside2 === triside3 && triside1 !== triside2) {
       $("#answer").text(isosceles);
       $("#answer").show();
-    }
+    } else if (triside1 !== triside2 && triside2 !== triside3 && triside1 !== triside3) {
+      $("#answer").text(scalene);
+      $("#answer").show();
+  // } else {
+  //   $("#answer").text(scalene);
+  //   $("#answer").show();
+  // }
 
 
   });
