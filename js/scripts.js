@@ -22,6 +22,9 @@ console.log("test")
     } else if (triside1 === triside3 && triside1 !== triside2) {
       $("#answer").text(isosceles);
       $("#answer").show();
+    } else if (triside2 === triside3 && triside1 !== triside2) {
+      $("#answer").text(isosceles);
+      $("#answer").show();
     }
 
 
