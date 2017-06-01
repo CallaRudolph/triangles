@@ -13,8 +13,12 @@ console.log("test")
     var equilateral = "Your triangle is equilateral"
     var isosceles = "Your triangle is isosceles"
     var scalene = "Your triangle is scalene homeslice"
+    var notatri = "Your triangle ain't a triangle! YOU FOOL!"
 
-    if (triside1 === triside2 && triside1 === triside3) {
+  if (triside1 + triside2 <= triside3 || triside2 + triside3 <= triside1 || triside1 + triside3 <= triside2) {
+    $("#answer").text(notatri);
+    $("#answer").show();
+  } else if (triside1 === triside2 && triside1 === triside3) {
       $("#answer").text(equilateral);
       $("#answer").show();
     } else if (triside1 === triside2 && triside1 !== triside3) {
@@ -34,6 +38,6 @@ console.log("test")
   //   $("#answer").show();
   // }
 
-
+}
   });
 });
