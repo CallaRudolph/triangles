@@ -11,9 +11,16 @@ console.log("test")
     console.log(triside3)
 
     var equilateral = "Your triangle is equilateral"
+    var isosceles = "Your triangle is isosceles"
 
     if (triside1 === triside2 && triside1 === triside3) {
       $("#answer").text(equilateral);
+      $("#answer").show();
+    } else if (triside1 === triside2 && triside1 !== triside3) {
+      $("#answer").text(isosceles);
+      $("#answer").show();
+    } else if (triside1 === triside3 && triside1 !== triside2) {
+      $("#answer").text(isosceles);
       $("#answer").show();
     }
 
